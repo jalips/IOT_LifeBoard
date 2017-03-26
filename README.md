@@ -1,5 +1,15 @@
 # LifeBoard
 
+- Start wifi in AP Mode
+- Launch web interface with form
+- Get SSID and Key
+- Save SSID and Key
+- Reboot (or not) in station mode
+- Send temperature to MQTT
+
+Hardware Required:
+* CC3200 or arduino
+
 Liste :
 - Liste Lib /include
 - Définir fichier conf (constantes, etc..)
