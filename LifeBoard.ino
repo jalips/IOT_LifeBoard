@@ -8,7 +8,9 @@ Loop function for ...
 
 *********************************************************************/
 
-#include "lib/includes.c"
+
+#include "src/lib/libManager.h"
+//#include "lib/includes.c"
 
 void setup() {
   // initialize serial communication at 115200 bits per second:
