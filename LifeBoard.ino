@@ -9,7 +9,7 @@ Loop function for ...
 *********************************************************************/
 
 
-#include "src/lib/libManager.h"
+#include "src/libManager.h"
 //#include "lib/includes.c"
 
 void setup() {

@@ -1,2 +1,0 @@
-/home/link/Documents/_Projects/LifeBoard/LifeBoard.ino: file not recognized: Format de fichier non reconnu
-collect2: error: ld returned 1 exit status
