@@ -2,15 +2,13 @@
 
 Library manager
 
-Use to list all include files necessary
+Use to list all include necessary files
 
 *********************************************************************/
 
-
-#define MQTTCLIENT_QOS2 1
-
 // Include application, user and local libraries
 #ifndef __CC3200R1M1RGC__
+// TODO : It's for what ??
 #include <SPI.h>                // Do not include SPI for CC3200 LaunchPad
 #endif
 
@@ -30,4 +28,4 @@ Use to list all include files necessary
 #include <Countdown.h>
 #include <MQTTClient.h>
 
-#include "src/ArduinoHttpClient.h"
+#include "lib/ArduinoHttpClient-master/src/ArduinoHttpClient.h"

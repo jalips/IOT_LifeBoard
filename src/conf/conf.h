@@ -1,8 +1,11 @@
+
+
+
 /*********************************************************************
 
 Configuration file
 
-Use to list all necessary variables 
+Use to list all necessary variables
 
 *********************************************************************/
 
@@ -14,6 +17,8 @@ const int buttonPin = PUSH2;     // the number of the pushbutton pin
 int buttonState = 0;         // variable for reading the pushbutton status
 
 /**** CONF MQTT *****/
+#define MQTTCLIENT_QOS2 1
+
 char hostname[] = "10.3.5.66";
 //char hostname[] = "192.168.1.32";
 int port = 1883;

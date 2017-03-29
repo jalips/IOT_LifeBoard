@@ -1,7 +1,7 @@
 /*********************
 Display Banner
 **********************/
-void initBanner(){
+void trollFace(){
     Serial.println("                                       .....'',;;::cccllllllllllllcccc:::;;,,,''...'',,'..");
     Serial.println("                            ..';cldkO00KXNNNNXXXKK000OOkkkkkxxxxxddoooddddddxxxxkkkkOO0XXKx:.");
     Serial.println("                      .':ok0KXXXNXK0kxolc:;;,,,,,,,,,,,;;,,,''''''',,''..              .'lOXKd'");

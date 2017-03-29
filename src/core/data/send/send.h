@@ -48,7 +48,8 @@ int modeSendData(){
     float diet = tmp006.readDieTempC();
     Serial.print("Die Temperature: "); Serial.print(diet); Serial.println("*C");
 
-    sendMQTTMessage(diet);
+    const char* topic = "/julien";
+    sendMQTTMessage(diet, topic);
 
     delay(4000); // 4 seconds per reading for 16 samples per reading
 

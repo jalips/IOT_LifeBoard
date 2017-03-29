@@ -126,8 +126,9 @@ void setApMode() {
                     text.replace("GET /?ssid=", "");
                     text.replace("password=", "");
 
-                    writeconf(text);
-                    restart();
+                    // TODO : Function missing
+                    //writeconf(text);
+                    //restart();
 
 
                 }
@@ -140,6 +141,42 @@ void setApMode() {
         Serial.println();
     }
 }
+
+
+
+/*********************
+Init wifi in AP Mode
+**********************/
+void initWifi(){
+    Serial.println("*** LaunchPad CC3200 WiFi Web-Server in AP Mode");
+
+    // Start WiFi and create a network with wifi_name as the network name
+    // with wifi_password as the password.
+    Serial.print("Starting AP... ");
+    WiFi.beginNetwork(wifi_name, wifi_password);
+    while (WiFi.localIP() == INADDR_NONE)
+    {
+        // print dots while we wait for the AP config to complete
+        Serial.print('.');
+        delay(300);
+    }
+    Serial.println("DONE");
+
+    Serial.print("LAN name = ");
+    Serial.println(wifi_name);
+    Serial.print("WPA password = ");
+    Serial.println(wifi_password);
+
+    IPAddress ip = WiFi.localIP();
+    Serial.print("Webserver IP address = ");
+    Serial.println(ip);
+
+    Serial.print("Web-server port = ");
+    myServer.begin();                           // start the web server on port 80
+    Serial.println("80");
+    Serial.println();
+}
+
 
 /*********************
 Wifi running in AP Mode
@@ -269,37 +306,4 @@ int modeAP(){
         Serial.println(". Client disconnected from server");
         Serial.println();
     }
-}
-
-/*********************
-Init wifi in AP Mode
-**********************/
-void initWifi(){
-    Serial.println("*** LaunchPad CC3200 WiFi Web-Server in AP Mode");
-
-    // Start WiFi and create a network with wifi_name as the network name
-    // with wifi_password as the password.
-    Serial.print("Starting AP... ");
-    WiFi.beginNetwork(wifi_name, wifi_password);
-    while (WiFi.localIP() == INADDR_NONE)
-    {
-        // print dots while we wait for the AP config to complete
-        Serial.print('.');
-        delay(300);
-    }
-    Serial.println("DONE");
-
-    Serial.print("LAN name = ");
-    Serial.println(wifi_name);
-    Serial.print("WPA password = ");
-    Serial.println(wifi_password);
-
-    IPAddress ip = WiFi.localIP();
-    Serial.print("Webserver IP address = ");
-    Serial.println(ip);
-
-    Serial.print("Web-server port = ");
-    myServer.begin();                           // start the web server on port 80
-    Serial.println("80");
-    Serial.println();
 }

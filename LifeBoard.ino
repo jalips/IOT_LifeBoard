@@ -8,15 +8,14 @@ Loop function for ...
 
 *********************************************************************/
 
-
 #include "src/libManager.h"
-//#include "lib/includes.c"
+#include "src/coreManager.h"
 
 void setup() {
   // initialize serial communication at 115200 bits per second:
   Serial.begin(115200);
   // Banner
-  initBanner();
+  displayBanner();
 
   // initialize the LED pin as an output:
   pinMode(GREEN_LED, OUTPUT);
